@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            background-color:black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100vh;
+
+
+        }
+        .box{
+            width:250px;
+            height:250px;
+            border:4px solid transparent;
+            border-radius: 10px;
+            background-image: linear linear-gradient(black,black)
+            linear-gradient(to right,#ff00cc,#3333ff);
+            background-origin: border-box;
+            background-clip: content-box,border-box;
+            animation: glow 1s infinite , large 1s infinite;
+            
+        }
+
+        @keyframes glow{
+            0%{
+                box-shadow: 0 0 15px #f6f049,0 0 30px #ff0019 , 0 0 45px #ff33eb, 0 0 60px #ff33eb;
+            }
+            100%{
+                box-shadow: 0 0 20px #f6f049,0 0 40px #ff0019 , 0 0 6px #ff33eb, 0 0 80px #ff33eb;
+                opacity: 0;
+            }
+        }
+        @keyframes large{
+            0%{transform: scale(1);}
+            100%{transform: scale(2);}
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

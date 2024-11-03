@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(255, 187, 0);
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 900px;
+            width: 100%;
+        }
+        .box{
+            border: 2px;
+            width: 50%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .l1{
+            animation: e1 5s infinite;
+            position: absolute;
+            height: 0px;
+            width: 0px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .circle{
+            border: 2px;
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            position: absolute;
+            background-color: rgb(255, 255, 115);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text{
+            animation: r1 5.8s infinite;
+            transform: translate(-200%);
+            font-size: 50px;
+            font-weight: bold;
+            width: 100%;
+        }
+        .fa-camera, .fa-house, .fa-location-dot, .fa-facebook, .fa-twitter, .fa-youtube, .fa-phone, .fa-tv {
+            font-size: 40px;
+        }
+        @keyframes r1{
+            0%{
+                transform: translate(-100%);
+                color: aliceblue;
+                text-align: right;
+            }
+            25%{
+                color: aliceblue;
+                text-align: right;
+            }
+            50%{
+                text-align: right;
+            }
+            75%{
+                text-align: right;
+            }
+            100%{
+                transform: translate(0);
+                color: black;
+                text-align: right;
+            }
+        }
+        @keyframes e1{
+            0%{
+                transform: rotate(-360deg);
+                position: absolute;
+            }
+        }
+        .circle:nth-child(1){
+            transform: translateX(-200px);
+        }
+        .circle:nth-child(2){
+            transform: translateY(-200px);
+        }
+        .circle:nth-child(3){
+            transform: translateX(200px);
+        }
+        .circle:nth-child(4){
+            transform: translateY(200px);
+        }
+        .circle:nth-child(5){
+            transform: translate(150px,-150px);
+        }
+        .circle:nth-child(6){
+            transform: translate(-150px,-150px);
+        }
+        .circle:nth-child(7){
+            transform: translate(-150px,150px);
+        }
+        .circle:nth-child(8){
+            transform: translate(150px,150px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"><h1 class="text">Pay Bills Instantly</h1></div>
+        <div class="box">
+           <div class="l1"> 
+            <div class="circle"><i class="fa-solid fa-camera"></i></div>
+            <div class="circle"><i class="fa-solid fa-house"></i></div>
+            <div class="circle"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="circle"><i class="fa-brands fa-facebook"></i></div>
+            <div class="circle"><i class="fa-brands fa-twitter"></i></div>
+            <div class="circle"><i class="fa-brands fa-youtube"></i></div>
+            <div class="circle"><i class="fa-solid fa-phone"></i></div>
+            <div class="circle"><i class="fa-solid fa-tv"></i></div>
+           </div>
+        </div>
+    </div>
+</body>
+</html>

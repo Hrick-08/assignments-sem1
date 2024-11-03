@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Alignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .category-card {
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+            text-align: center;
+        }
+
+        .category-card:hover {
+            transform: scale(1.05);
+        }
+
+        .category-img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .category-title {
+            font-weight: 500;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        .free-delivery {
+            background-color: #a8e6a1;
+            /* Saturated light green */
+            color: #155724;
+            /* Dark green text */
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        .image-wrapper {
+            position: relative;
+        }
+
+        .play-button {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            padding: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 class="display-4 text-center mb-5 ">Shop on-sale decor and so much more!</h2>
+        <div class="d-flex justify-content-around align-items-center flex-wrap">
+            <div class="text-center">
+                <img src="https://i.etsystatic.com/10845488/r/il/cb03a8/3493934816/il_340x270.3493934816_fow1.jpg"
+                    alt="Decor Finds On Sale" class="rounded-circle" width="100">
+                <p>Decor Finds On Sale</p>
+            </div>
+            <div class="text-center">
+                <img src="https://i.etsystatic.com/28737060/r/il/62e0d5/6173198121/il_300x300.6173198121_ccbj.jpg"
+                    alt="Outdoor Finds On Sale" class="rounded-circle" width="100">
+                <p>Outdoor Finds On Sale</p>
+            </div>
+            <div class="text-center">
+                <img src="https://i.etsystatic.com/24620229/r/il/d0c545/6337262290/il_340x270.6337262290_r86l.jpg"
+                    alt="Kitchen Finds On Sale" class="rounded-circle" width="100">
+                <p>Kitchen Finds On Sale</p>
+            </div>
+            <div class="text-center">
+                <img src="https://i.etsystatic.com/28614761/c/1784/1784/205/0/il/e24fdc/5157837722/il_300x300.5157837722_9vgi.jpg"
+                    alt="Wedding Gifts" class="rounded-circle" width="100">
+                <p>Wedding Gifts</p>
+            </div>
+            <div class="text-center">
+                <img src="https://i.etsystatic.com/25551803/r/il/b37ae8/4638748033/il_600x600.4638748033_5oqk.jpg"
+                    alt="Wedding Gifts" class="rounded-circle" width="100">
+                <p>Easter Gifts</p>
+            </div>
+            <div class="text-center">
+                <img src="https://i.etsystatic.com/23326449/c/2000/2000/0/0/il/6d72c2/3883614573/il_340x270.3883614573_hhk4.jpg"
+                    alt="Wedding Gifts" class="rounded-circle" width="100">
+                <p>Gifts On Sale </p>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <h2 class=" display-4 text-center mb-5">Shop by Category</h2>
+        <div class="row g-4">
+            <!-- First row of categories -->
+            <div class="col-2">
+                <div class="card category-card">
+                    <img src="https://i.etsystatic.com/34379934/c/1652/1312/77/688/il/c266fb/6084738158/il_680x540.6084738158_e1pd.jpg"
+                        class="category-img" alt="Jewellery">
+                </div>
+                <p class="category-title text-center">Jewellery</p>
+            </div>
+            <div class="col-2">
+                <div class="card category-card">
+                    <img src="https://i.etsystatic.com/20415229/r/il/299ffb/6211028495/il_600x600.6211028495_ai1l.jpg"
+                        class="category-img" alt="Home & Living">
+                </div>
+                <p class="category-title text-center">Home & Living</p>
+            </div>
+
+            <div class="col-2">
+                <div class="card category-card">
+                    <img src="https://i.etsystatic.com/43965207/r/il/cfbba8/6213260482/il_600x600.6213260482_ee1o.jpg"
+                        class="category-img" alt="Art & Collectibles">
+                </div>
+                <p class="category-title text-center"> Art & Collectibles</p>
+            </div>
+            <div class="col-2">
+                <div class="card category-card">
+                    <img src="https://i.etsystatic.com/51518374/r/il/157155/6116721091/il_600x600.6116721091_bs4t.jpg"
+                        class="category-img" alt="Clothing">
+                </div>
+                <p class="category-title text-center">Clothing</p>
+            </div>
+            <div class="col-2">
+                <div class="card category-card">
+                    <img src="https://i.etsystatic.com/27227568/r/il/3227d7/3759964549/il_600x600.3759964549_mnag.jpg"
+                        class="category-img" alt="Baby">
+                </div>
+                <p class="category-title text-center">Baby</p>
+            </div>
+            <div class="col-2">
+                <div class="card category-card">
+                    <img src="https://i.etsystatic.com/42235395/r/il/7b1564/5241326515/il_600x600.5241326515_7zo7.jpg"
+                        class="category-img" alt="Weddings">
+                </div>
+                <p class="category-title text-center">Weddings</p>
+            </div>
+            <div class="col-2">
+                <div class="card category-card">
+                    <img src="https://i.etsystatic.com/37761476/c/1688/1688/456/0/il/56d097/5097302938/il_600x600.5097302938_ro8w.jpg"
+                        class="category-img" alt="Accessories">
+
+                </div>
+                <p class="category-title text-center">Accessories</p>
+            </div>
+            <div class="col-2">
+                <div class="card category-card">
+                    <img src="https://i.etsystatic.com/29543619/c/1080/1080/0/0/il/bc28d6/6112351078/il_600x600.6112351078_l3rs.jpg"
+                        class="category-img" alt="Bags & Purses">
+
+                </div>
+                <p class="category-title text-center">Bags&Purses</p>
+            </div>
+            <div class="col-2">
+                <div class="card category-card">
+                    <img src="https://i.etsystatic.com/36710056/r/il/5a63c5/4981587997/il_340x270.4981587997_m9qc.jpg"
+                        class="category-img" alt="Electronics & Accessories">
+
+                </div>
+                <p class="category-title text-center"> Electronics & Accessories</p>
+
+            </div>
+            <div class="col-2">
+                <div class="card category-card">
+                    <img src="https://i.etsystatic.com/39094327/c/2331/1851/667/0/il/bba4d5/5018353482/il_340x270.5018353482_8mwc.jpg"
+                        class="category-img" alt="Craft Supplies & Tools">
+                </div>
+                <p class="category-title text-center">Craft Supplies & Tools</p>
+
+            </div>
+            <div class="col-2">
+                <div class="card category-card">
+                    <img src="https://i.etsystatic.com/15249051/r/il/862a6e/4564972178/il_340x270.4564972178_ga2o.jpg"
+                        class="category-img" alt="Bath & Beauty">
+
+                </div>
+                <p class="category-title text-center">Bath & Beauty</p>
+            </div>
+            <div class="col-2">
+                <div class="card category-card">
+                    <img src="https://i.etsystatic.com/20931094/c/1366/1366/350/0/il/d301cb/5757908322/il_600x600.5757908322_grzh.jpg"
+                        class="category-img" alt="Books, Films & Music">
+                </div>
+                <p class="category-title text-center">Books, Films & Music</p>
+            </div>
+        </div>
+
+
+        <div class="text-center mt-4">
+            <button class="btn btn-secondary">Show More (5)</button>
+        </div>
+    </div>
+    <div class="container my-5">
+        <h3 class="mb-4">Popular gifts right now</h3>
+        <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
+            < <div class="col">
+                <div class="card h-100 border-0">
+                    <div class="image-wrapper">
+                        <img src="https://i.etsystatic.com/28137843/r/il/df0137/6135084049/il_600x600.6135084049_f0yt.jpg"
+                            class="card-img-top" alt="Engraved Birth Flower Jewellery Box">
+                        <div class="play-button"><i class="fas fa-play"></i></div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Engraved Birth Flower Jewellery Box, Travel Jewelry</h6>
+                        <p class="mb-1">
+                            <span class="text-dark">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </span>
+                            <span class="text-muted">(38,348)</span>
+                        </p>
+                        <p class="text-success mb-1">₹523 <del class="text-muted">₹871</del> <span
+                                class="text-success">(40% off)</span></p>
+                    </div>
+                </div>
+        </div>
+
+
+        <div class="col">
+            <div class="card h-100 border-0">
+                <img src="https://i.etsystatic.com/34379934/c/2000/2000/0/0/il/628644/4796937795/il_600x600.4796937795_qnr6.jpg"
+                    class="card-img-top" alt="Custom Name Necklace, 18K Gold Plated">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Custom Name Necklace, 18K Gold Plated Name Necklace</h6>
+                    <p class="mb-1">
+                        <span class="text-dark">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </span>
+                        <span class="text-muted">(22,322)</span>
+                    </p>
+                    <p class="text-success mb-1">₹1,088 <del class="text-muted">₹2,176</del> <span
+                            class="text-success">(50% off)</span></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col">
+            <div class="card h-100 border-0">
+                <div class="image-wrapper">
+                    <img src="https://i.etsystatic.com/6267543/r/il/a6be46/5581716576/il_600x600.5581716576_t65j.jpg"
+                        class="card-img-top" alt="Personalized Mama Sweatshirt with Kid Names">
+                    <div class="play-button"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="card-body text-center">
+                    <h6 class="card-title">Personalized Mama Sweatshirt with Kid Names</h6>
+                    <p class="mb-1">
+                        <span class="text-dark">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </span>
+                        <span class="text-muted">(34,172)</span>
+                    </p>
+                    <p class="text-success mb-1">₹2,060 <del class="text-muted">₹3,434</del> <span
+                            class="text-success">(40% off)</span></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col">
+            <div class="card h-100 border-0">
+                <img src="https://i.etsystatic.com/52017258/r/il/76b3bc/6353205929/il_600x600.6353205929_neq9.jpg"
+                    class="card-img-top" alt="Custom Makeup Bag, Personalized Bridesmaid">
+                <div class="card-body text-center">
+                    <h6 class="card-title">Custom Makeup Bag, Personalized Bridesmaid</h6>
+                    <p class="mb-1">
+                        <span class="text-dark">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </span>
+                        <span class="text-muted">(5,487)</span>
+                    </p>
+                    <p class="text-success mb-1">₹1,606 <del class="text-muted">₹2,295</del> <span
+                            class="text-success">(30% off)</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card h-100 border-0">
+                <div class="image-wrapper">
+                    <img src="https://i.etsystatic.com/23882062/r/il/b62453/4752887542/il_600x600.4752887542_9dr4.jpg"
+                        class="card-img-top" alt="Personalised Song Plaque With Stand">
+                    <div class="play-button"><i class="fas fa-play"></i></div>
+                </div>
+                <div class="card-body text-center">
+                    <h6 class="card-title">Personalised Song Plaque With Stand, Any Photo</h6>
+                    <p class="mb-1">
+                        <span class="text-dark">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </span>
+                        <span class="text-muted">(12,923)</span>
+                    </p>
+                    <p class="text-success mb-1">₹2,147 <del class="text-muted">₹2,385</del> <span
+                            class="text-success">(10% off)</span></p>
+                    <p><span class="free-delivery">FREE delivery</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

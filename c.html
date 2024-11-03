@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUGAR Cosmetics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        .top-banner {
+            background-color: #d4b78f;
+            color: #000;
+            text-align: center;
+            padding: 8px;
+            position: relative;
+            font-size: 14px;
+        }
+
+        .close-banner {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .navbar {
+            background-color: #000;
+            padding: 15px 0;
+        }
+
+        .navbar-brand img {
+            height: 35px;
+            object-fit: contain;
+        }
+
+        .search-container {
+            position: relative;
+            flex-grow: 1;
+            max-width: 500px;
+            margin: 0 20px;
+        }
+
+        .search-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            color: #333;
+            width: 100%;
+            padding: 8px 35px 8px 15px;
+            border-radius: 5px;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-size: 13px;
+            padding: 8px 12px !important;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .hero-banner {
+            padding: 0;
+        }
+
+        .carousel-indicators {
+            bottom: 20px;
+        }
+
+        .carousel-indicators button {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin: 0 4px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .carousel-indicators .active {
+            background-color: #fff;
+        }
+
+        .auth-buttons {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-right: 15px;
+        }
+
+        .login-register-btn {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .login-register-btn i {
+            margin-right: 5px;
+            font-size: 18px;
+        }
+
+        .login-register-separator {
+            color: #666;
+            margin: 0 5px;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-left: 20px;
+        }
+
+        .header-icon {
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0;
+            font-size: 24px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background: #ff0066;
+            margin: 10px auto;
+        }
+
+        .product-card {
+            background: white;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 3px 8px;
+            color: white;
+            font-size: 12px;
+            border-radius: 3px;
+        }
+
+        .bestseller-badge {
+            background-color: #007bff;
+        }
+
+        .trending-badge {
+            background-color: #ff0066;
+        }
+
+        .new-badge {
+            background-color: #28a745;
+        }
+
+        .product-title {
+            font-size: 14px;
+            margin: 15px 0;
+            min-height: 40px;
+        }
+
+        .price-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin: 10px 0;
+        }
+
+        .discount {
+            color: #ff0066;
+            font-size: 14px;
+        }
+
+        .action-btn {
+            background: #000;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .wishlist-btn {
+            border: 1px solid #ddd;
+            background: white;
+            padding: 8px;
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px auto 0;
+        }
+
+        .hot-deals {
+            background-color: #f5f5f5;
+            padding: 40px 0;
+        }
+
+        .deal-card img {
+            border-radius: 8px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        Use code: FIRST20 to get 20% OFF on your first order!
+        <span class="close-banner">&times;</span>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://images.sugarcosmetics.com/Logo/8afa3a06-c6e3-4c8a-9fbe-c69c22a18631.png" alt="SUGAR">
+            </a>
+            
+            <div class="d-flex align-items-center flex-grow-1">
+                <div class="search-container">
+                    <input type="text" class="search-box" placeholder="Try 'Liquid Lipstick'">
+                    <i class="bi bi-search search-icon"></i>
+                </div>
+                
+                <div class="auth-buttons">
+                    <a href="#" class="login-register-btn">
+                        <i class="bi bi-person"></i>
+                        Login
+                    </a>
+                    <span class="login-register-separator">/</span>
+                    <a href="#" class="login-register-btn">Register</a>
+                </div>
+                
+                <div class="header-icons">
+                    <a href="#" class="header-icon">
+                        <i class="bi bi-heart"></i>
+                    </a>
+                    <a href="#" class="header-icon">
+                        <i class="bi bi-bag"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Categories Nav -->
+    <nav class="navbar navbar-expand-lg bg-black">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">LIPS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">EYES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FACE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">NAILS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SKINCARE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ACCESSORIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">GIFTS & KITS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BESTSELLERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">NEW LAUNCHES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">OFFERS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">STORES</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://in.sugarcosmetics.com/_next/image?url=https%3A%2F%2Fimages.sugarcosmetics.com%2FHomepage%2F109be1ae-3451-4fc0-8f05-8ec6d654da07.jpg&w=1920&q=100" class="d-block w-100" alt="SUGAR X NOISE">
+            </div>
+        </div>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+        </div>
+    </div>
+
+    <!-- Bestsellers Section -->
+    <section class="bestsellers">
+        <div class="container">
+            <h2 class="section-title">BESTSELLERS</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="product-card">
+                        <span class="product-badge bestseller-badge">Bestseller</span>
+                        <img src="https://in.sugarcosmetics.com/_next/image?url=https://cdn.shopify.com/s/files/1/0906/2558/files/SUGAR-Play-Smooth-Operator-Lip-Crayon.jpg?v=1719899956&w=256&q=75" alt="LA LA LOVE 18HR Liquid Lipstick" class="img-fluid">
+                        <h5 class="product-title">LA LA LOVE 18HR Liquid Lipstick - Set of 3</h5>
+                        <div class="price-info">
+                            <span class="price">₹899</span>
+                            <span class="discount">(25% Off)</span>
+                        </div>
+                        <button class="action-btn">CHOOSE ITEMS</button>
+                        <button class="wishlist-btn">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-card">
+                        <span class="product-badge bestseller-badge">Bestseller</span>
+                        <img src="https://in.sugarcosmetics.com/_next/image?url=https://cdn.shopify.com/s/files/1/0906/2558/files/SUGAR-Play-Power-Drip-Lip-Gloss.jpg?v=1719893402&w=256&q=75" alt="SUGAR Play Power Drip Lip Gloss" class="img-fluid">
+                        <h5 class="product-title">SUGAR Play Power Drip Lip Gloss - Set of 3</h5>
+                        <div class="price-info">
+                            <span class="price">₹899</span>
+                            <span class="discount">(25% Off)</span>
+                        </div>
+                        <button class="action-btn">CHOOSE ITEMS</button>
+                        <button class="wishlist-btn">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-card">
+                        <span class="product-badge bestseller-badge">Bestseller</span>
+                        <img src="https://in.sugarcosmetics.com/_next/image?url=https://cdn.shopify.com/s/files/1/0906/2558/files/SUGAR-Play-Vibe-Check-Liquid-Lipstick.jpg?v=1719893862&w=256&q=75" alt="SUGAR Play Vibe Check Liquid Lipstick" class="img-fluid">
+                        <h5 class="product-title">SUGAR Play Vibe Check Liquid Lipstick - Set of 3</h5>
+                        <div class="price-info">
+                            <span class="price">₹899</span>
+                            <span class="discount">(25% Off)</span>
+                        </div>
+                        <button class="action-btn">CHOOSE ITEMS</button>
+                        <button class="wishlist-btn">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="product-card">
+                        <span class="product-badge bestseller-badge">Bestseller</span>
+                        <img src="https://in.sugarcosmetics.com/_next/image?url=https://cdn.shopify.com/s/files/1/0906/2558/files/Smudge-Me-Not-Mini-Liquid-Lipstick-Set-of-4-Power-Up-Your-Pout_45b78ef0-74d1-4b89-97a8-20715a936d12.jpg?v=1723044980&w=256&q=75" alt="Smudge-Me-Not-Mini-Liquid-Lipstick-Set-of-4-Power-Up-Your-Pout_45b78ef0-74d1-4b89-97a8-20715a936d12" class="img-fluid">
+                        <h5 class="product-title">SUGAR Smudge Me Not Mini Liquid Lipstick-Set of 4</h5>
+                        <div class="product-price">
+                            ₹899 <span class="discount">(25% Off)</span>
+                        </div>
+                        <button class="action-btn">CHOOSE ITEMS</button>
+                        <button class="wishlist-btn">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hot-deals">
+        <div class="container">
+            <h2 class="section-title">HOT DEALS</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="deals-card">
+                        <img src="https://in.sugarcosmetics.com/_next/image?url=https://cdn.shopify.com/s/files/1/0906/2558/files/SUGAR-Play-Mega-Hype-Colour-Changing-Lip-Oil.jpg?v=1719899159&w=256&q=75" alt="Free Makeup Pouch" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="deals-card">
+                        <img src="https://in.sugarcosmetics.com/_next/image?url=https://cdn.shopify.com/s/files/1/0906/2558/files/Dream-Cover-SPF15-Mattifying-Compact.jpg?v=1719842368&w=256&q=75" alt="Dandiya Looks" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="deals-card">
+                        <img src="https://in.sugarcosmetics.com/_next/image?url=https://cdn.shopify.com/s/files/1/0906/2558/files/SUGAR-Signature-Makeup-Kit.jpg?v=1719901641&w=256&q=75" alt="Makeup Combos" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
